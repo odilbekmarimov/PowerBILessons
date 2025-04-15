@@ -1,0 +1,47 @@
+project number,table name,column name,possible values,explanation
+1,Production,Date,YYYY-MM-DD,Date of the production entry
+1,Production,ProductionLine,"Line1, Line2, Line3",The production line where the product was manufactured
+1,Production,Shift,"Day, Swing, Night",Work shift during which the production occurred
+1,Production,ProductID,P001-P012,Unique identifier for the product
+1,Production,UnitsProduced,Integer,Total number of units produced
+1,Production,Defects,Integer,Number of defective units identified
+1,Production,PlannedProduction,Integer,Planned number of units to produce
+1,Production,OperationalHours,Float,Number of hours the line was operational
+1,Production,Downtime (min),Integer,Total downtime in minutes
+1,Products,ProductID,P001-P012,Unique identifier for each product
+1,Products,ProductName,Text,Name of the product
+1,Products,Category,"Electronics, Mechanical, Consumer",Product category
+1,Products,ProductCost (USD),Decimal,Cost of manufacturing one unit of the product
+1,Quality,BatchID,Text,Unique identifier for the inspection batch
+1,Quality,ProductID,P001-P012,Linked product ID
+1,Quality,InspectionDate,YYYY-MM-DD,Date when the inspection occurred
+1,Quality,Result,"Pass, Fail, Conditional",Outcome of the inspection
+1,Quality,DefectType,"Assembly, Material, Finish",Type of defect found
+1,Quality,Severity,"Low, Medium, High",Severity of the defect
+1,Quality,Inspector,Text,Name of the inspector
+2,Sales,InvoiceNo,INV-1001 to INV-1020,Unique identifier for the sales transaction
+2,Sales,SaleDate,YYYY-MM-DD,Date of the sales transaction
+2,Sales,CustomerID,C001-C012,Identifier for the customer
+2,Sales,ProductID,P001-P012,Identifier for the sold product
+2,Sales,Quantity,Integer,Number of units sold
+2,Sales,UnitPrice (USD),Decimal,Price per unit
+2,Sales,Discount (%),Decimal,Discount percentage applied
+2,Sales,ShippingCost (USD),Decimal,Shipping cost for the transaction
+2,Sales,SalesRep,Text,Sales representative responsible for the sale
+2,Customers,CustomerID,C001-C012,Unique identifier for the customer
+2,Customers,CustomerName,Text,Name of the customer
+2,Customers,Category,"Distributors, Retailers, Direct",Type of customer
+2,Customers,Country,"USA, Canada, Germany, UK",Customer's country
+2,Customers,RelationshipStartDate,YYYY-MM-DD,Date when the customer relationship began
+2,Targets,Month,YYYY-MM,Month for which targets are set
+2,Targets,ProductCategory,"Electronics, Mechanical, Consumer",Product category
+2,Targets,SalesTarget (USD),Decimal,Monthly sales target
+2,Targets,ProductionTarget (Units),Integer,Monthly production target
+3,Machine_Operations,Date,YYYY-MM-DD,Date of the machine reading
+3,Machine_Operations,Hour,HH:MM,Hour of the reading
+3,Machine_Operations,MachineID,M001-M025,Machine identifier
+3,Machine_Operations,ProductionLine,Line1-Line5,Production line
+3,Machine_Operations,Temperature (°F),68-78,Temperature reading
+3,Machine_Operations,Vibration (g),0.05-0.25,Vibration reading in g-forces
+3,Machine_Operations,PowerConsumption (kWh),2-14,Energy consumed in kilowatt-hours
+3,Machine_Operations,OperatingStatus,"Running, Idle, Setup, Maintenance, Down",Current status of the machine
